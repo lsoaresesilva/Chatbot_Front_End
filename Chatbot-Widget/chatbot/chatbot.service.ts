@@ -10,7 +10,9 @@ import { map, mergeMap } from 'rxjs/operators';
 export class ChatbotService {
   public latestMessageArr:Observable<any[]>;
   public messageUpdate = new EventEmitter();
-
+  public senderID = Math.random()
+    .toString(36)
+    .substr(2);
   constructor(private http: HttpClient) { }
 
   // Faz conecção com o RASA (reinicia a conversa --> /restart)

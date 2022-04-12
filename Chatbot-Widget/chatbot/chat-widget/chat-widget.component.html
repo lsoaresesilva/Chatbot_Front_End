@@ -18,8 +18,8 @@
         <!----------------------------->
         <!------------BODY------------->
         <div class="chat-box-main">
-            <div class="chat-message-bottom" #bottom></div>
-            <ng-container *ngFor="let message of messages">
+            <div class="chat-message-bottom"></div>
+            <ng-container *ngFor="let message of messages" #bottom>
                 <div class="chat-message" [class.chat-message-received]='message.direction === "received"' [@fadeIn]
                     [class.chat-message-sent]="message.direction === 'sent'">
                     <!--Typing dots-->
@@ -50,7 +50,7 @@
         <!----------------------------->
         <!--FOOTER (INPUT AND BUTTON)-->
         <div class="chat-box-footer">
-            <chat-input (send)="sendMessage($event)" (dismiss)="toggleChat()" [focus]="focus"></chat-input>
+            <chat-input (send)="sendMessage($event)" (dismiss)="toggleChat()" ></chat-input>
         </div>
         <!----------------------------->
     </div>

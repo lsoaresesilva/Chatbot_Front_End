@@ -125,8 +125,9 @@
   margin: 5px;
   align-self: flex-start;
   flex-direction: row;
-  max-width: 90%;
+  max-width: 80%;
   word-wrap: break-word;
+  outline: none;
 }
 
 .chat-message-date {
@@ -162,7 +163,7 @@
 Received message style
  */
 .chat-message-received {
-  margin-right: 50px;
+  margin-right: 20px;
 }
 
 .chat-message-received .chat-message-text {
@@ -196,7 +197,7 @@ Received message style
 }
 
 .chat-message-received .chat-message-print {
-  background: #efb7a2;
+  background: #f4cbbb;
   font-family: monospace, monospace;
   font-size: 10px;
   border-radius: 12px;
